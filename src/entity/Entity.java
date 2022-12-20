@@ -2,12 +2,10 @@ package entity;
 
 import location.Locatable;
 import location.Location;
-
-
 import java.util.Objects;
 
 public abstract class Entity implements Locatable {
-    Location location;
+    protected Location location;
     public Entity(String name,int age){
         setName(name);
         setAge(age);
@@ -28,7 +26,7 @@ public abstract class Entity implements Locatable {
         return this.age;
     }
     @Override
-    public Location locate() {
+    public Location getLocation() {
         return this.location;
     }
 

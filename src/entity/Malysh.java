@@ -1,6 +1,5 @@
 package entity;
 
-import utils.Emotes;
 import utils.Emotionable;
 
 public class Malysh extends Human implements Emotionable {

@@ -30,7 +30,7 @@ public abstract class Human extends Entity implements Emotionable, Locatable {
         System.out.println(this.getName() + " находится в " + loc);
     }
     @Override
-    public Location locate(){
+    public Location getLocation(){
         return this.location;
     }
 }
