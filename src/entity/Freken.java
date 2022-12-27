@@ -1,5 +1,6 @@
 package entity;
 
+import utils.Emotes;
 import utils.Washable;
 
 public class Freken extends Human{
@@ -12,6 +13,9 @@ public class Freken extends Human{
     }
     public void remember(Object memories){
         System.out.println(this.getName() + " вспомнила о " + memories.toString());
+    }
+    public void look(Object person, Emotes emotes){
+        System.out.println(this.getName() + " посмотрела на " + person.toString() + " с " + emotes.translation());
     }
     public void think(){
         System.out.println(this.getName() + " раздумывает о великом");

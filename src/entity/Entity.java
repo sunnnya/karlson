@@ -10,8 +10,8 @@ public abstract class Entity implements Locatable {
         setName(name);
         setAge(age);
     }
-    private String name;
-    private int age;
+    public String name;
+    public int age;
 
     public void setName(String name){
         this.name = name;

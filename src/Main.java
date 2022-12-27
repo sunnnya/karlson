@@ -12,6 +12,7 @@ import entity.Freken;
 import entity.Karlson;
 import entity.Malysh;
 import location.Kitchen;
+import utils.Beautifulness;
 import utils.Emotes;
 import utils.Posuda;
 
@@ -22,15 +23,20 @@ public class Main {
         Kitchen kitchen = new Kitchen("Кухня");
         Freken frekenbok = new Freken( "Фрекенбок", 40);
         Malysh malysh = new Malysh("Малыш", 12);
-        Karlson karlson = new Karlson("Карлсон", 15);
+        Karlson karlson = new Karlson("Карлсон", 15, Beautifulness.DEFAULT);
+        Karlson imagkarlson = (Karlson) karlson.copy();
+        imagkarlson.setBeautifulness(Beautifulness.DEFAULT);
+        imagkarlson.setAge(25);
         frekenbok.setLocation(kitchen);
         malysh.setLocation(kitchen);
         frekenbok.wash(posuda);
+        frekenbok.look(malysh, Emotes.TREVOZH);
         frekenbok.act(Emotes.NEDOUM);
         frekenbok.think();
         frekenbok.say("Скоро дело дойдет до того, что дошкольники станут на Луну летать");
         frekenbok.remember(karlson);
-        frekenbok.say("Карлсон этот ваш невоспитанный и толстый мальчишка...");
+        frekenbok.say(karlson + " этот ваш невоспитанный и толстый мальчишка...");
         malysh.act(Emotes.NEDOVOL);
+        karlson.checkBeautifulness();
     }
 }

@@ -4,7 +4,8 @@ public enum Emotes {
     NEDOVOL("недовольство"),
     VOZBUZH("возбуждение"),
     NEDOUM("неудомевание"),
-    OK("ничего");
+    OK("ничего"),
+    TREVOZH("тревожность");
 private String translation;
     public String translation(){
         return this.translation;

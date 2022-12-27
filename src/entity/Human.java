@@ -1,6 +1,6 @@
 package entity;
 
-import location.Kitchen;
+
 import location.Locatable;
 import location.Location;
 import utils.Emotes;
@@ -15,6 +15,7 @@ public abstract class Human extends Entity implements Emotionable, Locatable {
     public void say (String text){
         System.out.println(this.getName() + " сказал: " + text);
     }
+
     @Override
     public void act(Emotes emote){
         this.emotes = emote;
