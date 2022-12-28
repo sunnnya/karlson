@@ -23,7 +23,7 @@ public class Main {
         Kitchen kitchen = new Kitchen("Кухня");
         Freken frekenbok = new Freken( "Фрекенбок", 40);
         Malysh malysh = new Malysh("Малыш", 12);
-        Karlson karlson = new Karlson("Карлсон", 15, Beautifulness.DEFAULT);
+        Karlson karlson = new Karlson("Карлсон", 15, Beautifulness.BEAUTY);
         Karlson imagkarlson = (Karlson) karlson.copy();
         imagkarlson.setBeautifulness(Beautifulness.DEFAULT);
         imagkarlson.setAge(25);
@@ -35,8 +35,7 @@ public class Main {
         frekenbok.think();
         frekenbok.say("Скоро дело дойдет до того, что дошкольники станут на Луну летать");
         frekenbok.remember(karlson);
-        frekenbok.say(karlson + " этот ваш невоспитанный и толстый мальчишка...");
+        frekenbok.say(imagkarlson + " этот ваш невоспитанный и толстый мальчишка...");
         malysh.act(Emotes.NEDOVOL);
-        karlson.checkBeautifulness();
     }
 }

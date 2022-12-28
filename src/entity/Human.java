@@ -3,6 +3,7 @@ package entity;
 
 import location.Locatable;
 import location.Location;
+import utils.Beautifulness;
 import utils.Emotes;
 import utils.Emotionable;
 

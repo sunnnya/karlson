@@ -4,8 +4,10 @@ import utils.Beautifulness;
 import utils.Copyable;
 
 public class Karlson extends Human implements Copyable {
+    Beautifulness beautifulness;
     public Karlson(String name, int age, Beautifulness beautifulness){
-        super(name,age, beautifulness);
+        super(name,age);
+        this.beautifulness = beautifulness;
     }
     public void setBeautifulness(Beautifulness beat){
         this.beautifulness = beat;
@@ -16,7 +18,7 @@ public class Karlson extends Human implements Copyable {
     public void checkBeautifulness(){
         System.out.println(this.getName() + " имеет внешность " + this.getBeautifulness().translation());
     }
-    private Beautifulness beautifulness = Beautifulness.NON;
+
     @Override
     public String toString(){
         return getName();
