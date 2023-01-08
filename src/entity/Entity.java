@@ -1,5 +1,6 @@
 package entity;
 
+import exceptions.unchecked.WrongAgeException;
 import location.Locatable;
 import location.Location;
 import java.util.Objects;
@@ -20,6 +21,9 @@ public abstract class Entity implements Locatable {
         return this.name;
     }
     public void setAge(int age){
+        if(age <= 0){
+            throw new WrongAgeException("Неверно введен возраст");
+        }
         this.age = age;
     }
     public int getAge(){

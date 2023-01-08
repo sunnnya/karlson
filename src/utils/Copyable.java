@@ -1,5 +1,7 @@
 package utils;
 
+import entity.Karlson;
+
 public interface Copyable {
-    Object copy();
+    Karlson copy();
 }

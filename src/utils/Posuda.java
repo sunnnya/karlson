@@ -5,7 +5,7 @@ public class Posuda implements Washable{
     public Posuda(String name){
         this.name = name;
     }
-    public String getName(){
+    public String getName( ){
         return this.name;
     }
     @Override
