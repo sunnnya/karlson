@@ -61,7 +61,7 @@ public class Main {
         frekenbok.look(malysh, Emotes.TREVOZH);
         frekenbok.act(Emotes.NEDOUM);
         Thinkable ref;
-        ref = (obj) -> obj.toString() + " раздумывает о великом";
+        ref = (obj) -> obj + " раздумывает о великом";
         System.out.println(ref.Think(frekenbok));
         frekenbok.say("Скоро дело дойдет до того, что дошкольники станут на Луну летать");
         frekenbok.remember(karlson);
@@ -72,6 +72,5 @@ public class Main {
         puddle.create();
         karlson.act(Emotes.NEDOVOL);
         karlson.setDiscontent();
-
     }
 }

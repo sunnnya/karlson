@@ -29,6 +29,20 @@ public class Karlson extends Human implements Copyable {
         eyes.rollEyes();
         System.out.println(this.name + " таит в себе упрек");
     }
+    public static String male = "мужчина";
+    public static class Male{
+        private String male;
+        public Male(){
+            this.male = Karlson.male;
+        }
+        public void getMale(Karlson pers){
+            System.out.println(pers.name + " является " + male);
+        }
+    }
+    public void checkMale(){
+        Male yep = new Male();
+        yep.getMale(this);
+    }
     public void setBeautifulness(Beautifulness beat){
         this.beautifulness = beat;
     }
