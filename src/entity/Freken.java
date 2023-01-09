@@ -2,6 +2,7 @@ package entity;
 
 import exceptions.checked.UnmovableException;
 import objects.Obj;
+import objects.Table;
 import utils.Emotes;
 import utils.Washable;
 
@@ -11,7 +12,17 @@ public class Freken extends Human {
     }
     private boolean sit = true;
     public void wash(Washable wash){
-        System.out.println(this.getName() + " моет " + wash.toString());
+        class Gloves{
+            private String model = "Резиновые перчатки";
+            public Gloves(){
+                this.model = model;
+            }
+            public String getModel(){
+                return model;
+            }
+        }
+        Gloves gloves = new Gloves();
+        System.out.println(this.getName() + " моет " + wash.toString() + " с надетыми " + gloves.getModel());
         wash.wash();
     }
     public void remember(Object memories){
@@ -24,11 +35,11 @@ public class Freken extends Human {
     public void look(Human person, Emotes emotes){
         System.out.println(this.getName() + " посмотрела на " + person.toString() + " с " + emotes.translation());
     }
-    public void move(Obj obj) throws UnmovableException{
-        if(obj.getWeight() > 50){
+    public void move(Table table) throws UnmovableException{
+        if(table.getWeight() > 50){
             throw new UnmovableException();
         }
-        System.out.println(this.getName() + " с упорством двинула " + obj.toString());
+        System.out.println(this.getName() + " с упорством двинула " + table.toString());
     }
     @Override
     public String toString(){

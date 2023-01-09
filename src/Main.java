@@ -25,6 +25,7 @@ import entity.*;
 import exceptions.checked.UnmovableException;
 import exceptions.unchecked.WrongAgeException;
 import location.Kitchen;
+import objects.Obj;
 import objects.Table;
 import utils.*;
 
@@ -32,8 +33,13 @@ import utils.*;
 public class Main {
     public static void main(String[] args) throws WrongAgeException {
         Posuda posuda = new Posuda("Посуда");
-
         Table table = new Table("Столик", 40);
+        Obj puddle = new Obj("Лужа"){
+            public void create(){
+                System.out.println("Образовалась " + this.getName());
+            }
+        };
+        table.create();
         Kitchen kitchen = new Kitchen("Кухня");
         Freken frekenbok = new Freken( "Фрекенбок", 40);
         Malysh malysh = new Malysh("Малыш", 10);
@@ -63,6 +69,9 @@ public class Main {
         malysh.act(Emotes.NEDOVOL);
         karlson.setLocation(kitchen);
         karlson.checkDryness();
+        puddle.create();
         karlson.act(Emotes.NEDOVOL);
+        karlson.setDiscontent();
+
     }
 }

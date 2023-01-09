@@ -5,6 +5,18 @@ import utils.Copyable;
 import utils.Dryness;
 
 public class Karlson extends Human implements Copyable {
+    private class Eyes{
+        Karlson owner;
+        String color = "Brown";
+        public boolean openess = true;
+
+        Eyes (Karlson owner){
+            this.owner = owner;
+        }
+        public void rollEyes(){
+            this.openess = false;
+        }
+    }
     Beautifulness beautifulness;
     Dryness dryness;
     public Karlson(String name, int age, Beautifulness beautifulness, Dryness dryness){
@@ -12,7 +24,11 @@ public class Karlson extends Human implements Copyable {
         this.beautifulness = beautifulness;
         this.dryness = dryness;
     }
-
+    public void setDiscontent(){
+        Eyes eyes = new Eyes(this);
+        eyes.rollEyes();
+        System.out.println(this.name + " таит в себе упрек");
+    }
     public void setBeautifulness(Beautifulness beat){
         this.beautifulness = beat;
     }
